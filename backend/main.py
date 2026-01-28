@@ -119,6 +119,14 @@ def get_storage() -> Storage:
 app = FastAPI(title="Sync To-Do API", version="1.0.0")
 storage: Storage = get_storage()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["*"],
+)
+
 
 # -------------------------------------------------
 # API endpoints (spec-compliant)
