@@ -7,7 +7,7 @@ export type Task = {
   completed: boolean;
 };
 
-const API_BASE = '';
+const API_BASE = 'https://project-e506628f-8ee9-434a-9890.onrender.com';
 
 async function handleResponse<T>(res: Response): Promise<T> {
   if (!res.ok) {
