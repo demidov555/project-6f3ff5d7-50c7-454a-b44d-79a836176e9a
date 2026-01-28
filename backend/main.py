@@ -13,7 +13,6 @@ from typing import List, Optional
 from uuid import uuid4
 import os
 
-# Attempt to import Cassandra driver; backend works without it if not installed
 try:
     from cassandra.cluster import Cluster  # type: ignore
 except ImportError:  # pragma: no cover
