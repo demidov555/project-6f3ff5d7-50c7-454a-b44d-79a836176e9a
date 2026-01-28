@@ -7,6 +7,7 @@ Default storage is in-memory; optional Cassandra layer can be enabled via USE_CA
 """
 
 from fastapi import FastAPI, HTTPException, status
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import List, Optional
 from uuid import uuid4
